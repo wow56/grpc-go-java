@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package hello;
+
+import "proto/hello/hello.proto";
+
+option go_package = "./hello";
+option java_multiple_files = true;
+option java_package = "com.marico.client.proto.hello";
+option java_outer_classname = "HelloProto";
+
+service HelloService{
+  rpc SayHello(HelloRequest) returns (HelloResponse){}
+}
